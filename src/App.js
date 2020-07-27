@@ -1,7 +1,8 @@
 import React from "react";
 // import logo from './logo.svg';
 import "./App.css";
-import { Nav, Logo, Menu, MenuItem } from "./components/nav/nav.styles";
+import styled from "styled-components"
+import { Nav, Logo, Menu, MenuItem, BurguerMenu, MenuLine } from "./components/nav/nav.styles";
 
 function App() {
 	const menuItems = ["My work", "Github", "About me", "Contact", "Resume"];
@@ -14,7 +15,12 @@ function App() {
 					{menuItems.map((item) => (
 						<MenuItem>{item}</MenuItem>
 					))}
-				</Menu>
+        </Menu>
+        <BurguerMenu>
+          <MenuLine />
+          <MenuLine />
+          <MenuLine />
+        </BurguerMenu>
 			</Nav>
 			{/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
