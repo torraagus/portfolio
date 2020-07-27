@@ -20,6 +20,20 @@ export const Logo = styled.div`
 	font-size: 18px;
 `;
 
+export const Button = styled.a`
+	display: none;
+	padding: .5rem 1rem .5rem 1rem;
+	background-color: tomato;
+	color: white;
+	font-weight: bold;
+	border-radius: 15px;
+	font-size: 14px;
+
+	@media (max-width: 768px) {
+		display: block;
+	}
+`;
+
 export const Menu = styled.ul`
 	display: flex;
 	list-style: none;

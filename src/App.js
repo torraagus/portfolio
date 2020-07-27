@@ -5,6 +5,7 @@ import styled from "styled-components";
 import {
 	Nav,
 	Logo,
+	Button,
 	Menu,
 	MenuItem,
 	BurguerMenu,
@@ -12,13 +13,17 @@ import {
 } from "./components/nav/nav.styles";
 
 function App() {
-	const menuItems = ["My work", "Github", "About me", "Contact", "Resume"];
+	const menuItems = ["My work", "Resume", "Github", "About me", "Contact"];
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
 		<div className="App">
 			<Nav>
 				<Logo>AIT</Logo>
+				<Button>See my work</Button>
+				{/* <div style={{ display: "flex" }}>
+					<Button>Resume</Button>
+				</div> */}
 				<Menu className={`${isOpen ? "menuActive" : ""}`}>
 					{menuItems.map((item) => (
 						<MenuItem>{item}</MenuItem>
