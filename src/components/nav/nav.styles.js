@@ -27,6 +27,10 @@ export const Menu = styled.ul`
 	padding: 0;
 	background-color: white;
 
+	&.menuActive {
+		transform: translateX(0%);
+	}
+
 	@media (max-width: 768px) {
 		flex-direction: column;
 		position: absolute;
@@ -34,6 +38,9 @@ export const Menu = styled.ul`
 		right: 0;
 		height: 92vh;
 		width: 60vw;
+
+		transform: translateX(100%);
+		transition: transform 0.3s ease;
 	}
 `;
 
@@ -42,6 +49,11 @@ export const MenuItem = styled.li`
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
 
+	:hover {
+		cursor: pointer;
+		color: tomato;
+	}
+
 	@media (max-width: 768px) {
 		display: flex;
 		align-items: center;
@@ -49,11 +61,21 @@ export const MenuItem = styled.li`
 		padding: 0;
 		margin: 0;
 		height: 20%;
+
+		:hover {
+			background-color: tomato;
+			color: white;
+			font-weight: bold;
+		}
 	}
 `;
 
 export const BurguerMenu = styled.div`
 	display: none;
+
+	:hover {
+		cursor: pointer;
+	}
 
 	@media (max-width: 768px) {
 		display: block;
@@ -62,7 +84,24 @@ export const BurguerMenu = styled.div`
 
 export const MenuLine = styled.div`
 	background-color: black;
-	margin: 5px 1px;
-	height: 3px;
+	margin: 5px;
+	height: 2px;
 	width: 25px;
+	transition: all 0.3s ease;
+
+	&.toggle {
+		background-color: tomato;
+	}
+
+	&.toggle.line1 {
+		transform: rotate(-45deg) translate(-5px, 5px);
+	}
+
+	&.toggle.line2 {
+		opacity: 0;
+	}
+
+	&.toggle.line3 {
+		transform: rotate(45deg) translate(-5px, -5px);
+	}
 `;

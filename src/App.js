@@ -1,26 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 // import logo from './logo.svg';
 import "./App.css";
-import styled from "styled-components"
-import { Nav, Logo, Menu, MenuItem, BurguerMenu, MenuLine } from "./components/nav/nav.styles";
+import styled from "styled-components";
+import {
+	Nav,
+	Logo,
+	Menu,
+	MenuItem,
+	BurguerMenu,
+	MenuLine,
+} from "./components/nav/nav.styles";
 
 function App() {
 	const menuItems = ["My work", "Github", "About me", "Contact", "Resume"];
+	const [isOpen, setIsOpen] = useState(false);
 
 	return (
 		<div className="App">
 			<Nav>
 				<Logo>AIT</Logo>
-				<Menu>
+				<Menu className={`${isOpen ? "menuActive" : ""}`}>
 					{menuItems.map((item) => (
 						<MenuItem>{item}</MenuItem>
 					))}
-        </Menu>
-        <BurguerMenu>
-          <MenuLine />
-          <MenuLine />
-          <MenuLine />
-        </BurguerMenu>
+				</Menu>
+				<BurguerMenu onClick={() => setIsOpen(!isOpen)}>
+					<MenuLine className={`${isOpen ? "toggle" : ""} line1`} />
+					<MenuLine className={`${isOpen ? "toggle" : ""} line2`} />
+					<MenuLine className={`${isOpen ? "toggle" : ""} line3`} />
+				</BurguerMenu>
 			</Nav>
 			{/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
