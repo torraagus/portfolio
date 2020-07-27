@@ -1,11 +1,22 @@
-import React from 'react';
+import React from "react";
 // import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Nav, Logo, Menu, MenuItem } from "./components/nav/nav.styles";
 
 function App() {
-  return (
-    <div className="App">
-      {/* <header className="App-header">
+	const menuItems = ["My work", "Github", "About me", "Contact", "Resume"];
+
+	return (
+		<div className="App">
+			<Nav>
+				<Logo>AIT</Logo>
+				<Menu>
+					{menuItems.map((item) => (
+						<MenuItem>{item}</MenuItem>
+					))}
+				</Menu>
+			</Nav>
+			{/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -19,8 +30,8 @@ function App() {
           Learn React
         </a>
       </header> */}
-    </div>
-  );
+		</div>
+	);
 }
 
 export default App;
