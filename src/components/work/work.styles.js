@@ -6,20 +6,6 @@ export const MyWork = styled.div`
 	padding-bottom: 2rem;
 `;
 
-export const Title = styled.h1`
-	color: white;
-	text-transform: uppercase;
-	margin: 0;
-    padding: 0;
-	font-size: ${(props) => props.size}px;
-`;
-
-export const Subtitle = styled.p`
-	color: #21e6c1;
-	margin: 0;
-	padding: 0;
-`;
-
 export const Projects = styled.div`
 	margin-top: 3rem;
 `;

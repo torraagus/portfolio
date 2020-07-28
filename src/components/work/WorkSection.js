@@ -4,8 +4,6 @@ import {
 	Projects,
 	Project,
 	ProjectInfo,
-	Title,
-	Subtitle,
 	TechItem,
 	Technologies,
 	Image,
@@ -14,6 +12,7 @@ import {
 	GithubBtn,
 	LiveVersionBtn,
 } from "./work.styles";
+import { Title, Subtitle } from "../shared/components.styles";
 
 export const WorkSection = () => {
 	const projects = [
