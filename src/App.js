@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 // import logo from './logo.svg';
 import "./App.css";
 import styled from "styled-components";
 import { NavBar } from "./components/navBar/NavBar";
 import { MainSection } from "./components/main/MainSection";
 import { WorkSection } from "./components/work/WorkSection";
+import { AboutMeSection } from "./components/about/AboutMe";
 
 function App() {
 	return (
@@ -12,6 +13,7 @@ function App() {
 			<NavBar />
 			<MainSection />
 			<WorkSection />
+			<AboutMeSection />
 			{/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
