@@ -22,12 +22,17 @@ export const Logo = styled.div`
 
 export const Button = styled.a`
 	display: none;
-	padding: .5rem 1rem .5rem 1rem;
-	background-color: tomato;
+	padding: 0.5rem 1rem 0.5rem 1rem;
+	background-color: #21e6c1;
 	color: white;
 	font-weight: bold;
 	border-radius: 15px;
 	font-size: 14px;
+
+	:hover {
+		cursor: pointer;
+		background-color: #278ea5;
+	}
 
 	@media (max-width: 768px) {
 		display: block;
@@ -65,7 +70,7 @@ export const MenuItem = styled.li`
 
 	:hover {
 		cursor: pointer;
-		color: tomato;
+		color: #21e6c1;
 	}
 
 	@media (max-width: 768px) {
@@ -77,7 +82,7 @@ export const MenuItem = styled.li`
 		height: 20%;
 
 		:hover {
-			background-color: tomato;
+			background-color: #21e6c1;
 			color: white;
 			font-weight: bold;
 		}
@@ -104,7 +109,7 @@ export const MenuLine = styled.div`
 	transition: all 0.3s ease;
 
 	&.toggle {
-		background-color: tomato;
+		background-color: #21e6c1;
 	}
 
 	&.toggle.line1 {

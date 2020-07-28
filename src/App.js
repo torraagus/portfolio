@@ -5,12 +5,12 @@ import styled from "styled-components";
 import { NavBar } from "./components/navBar/NavBar";
 
 const Main = styled.div`
-	height: 72vh;
+	height: 82vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: tomato;
+	background: #1f4287;
 `;
 
 const Name = styled.h3`
@@ -27,17 +27,34 @@ const Rol = styled.h1`
 `;
 
 const Button = styled.a`
-	background-color: white;
-	color: tomato;
+	background-color: #21e6c1;
+	color: white;
 	width: 200px;
 	height: 40px;
 	line-height: 40px;
 	border-radius: 15px;
 	font-weight: bold;
-	margin-top: .5rem;
+	margin-top: 0.5rem;
 
 	:hover {
-		background-color: lime;
+		opacity: 90%;
+		color: white;
+		cursor: pointer;
+	}
+`;
+
+const ResumeBtn = styled(Button)`
+	background-color: #278ea5;
+	color: white;
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 15px;
+	font-weight: bold;
+	margin-top: 0.5rem;
+
+	:hover {
+		opacity: 90%;
 		color: white;
 		cursor: pointer;
 	}
@@ -51,7 +68,7 @@ function App() {
 				<Name>Agustin Ignacio Torra</Name>
 				<Rol>React web developer</Rol>
 				<Button>See my work</Button>
-				<Button>Resume</Button>
+				<ResumeBtn>Resume</ResumeBtn>
 			</Main>
 			{/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
