@@ -6,6 +6,7 @@ import { NavBar } from "./components/navBar/NavBar";
 import { MainSection } from "./components/main/MainSection";
 import { WorkSection } from "./components/work/WorkSection";
 import { AboutMeSection } from "./components/about/AboutMe";
+import { ContactSection } from "./components/contact/ContactSection";
 
 function App() {
 	return (
@@ -13,7 +14,8 @@ function App() {
 			<NavBar />
 			<MainSection />
 			<WorkSection />
-			<AboutMeSection />
+			<AboutMeSection />			
+			<ContactSection />
 			{/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
