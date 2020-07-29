@@ -1,9 +1,8 @@
 import styled from "styled-components"
+import { Section } from "../shared/components.styles";
 
-export const AboutMe = styled.div`
+export const AboutMe = styled(Section)`
 	background-color: white;
-	padding-top: 5rem;
-	padding-bottom: 2rem;
 `;
 
 export const Description = styled.p`

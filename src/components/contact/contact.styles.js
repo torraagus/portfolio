@@ -1,9 +1,9 @@
 import styled from "styled-components";
-export const Contact = styled.div`
-	min-height: 100vh;
+import { Section } from "../shared/components.styles";
+
+export const Contact = styled(Section)`
+	// min-height: 100vh;
 	background-color: #278ea5;
-	padding-top: 5rem;
-	padding-bottom: 2rem;
 `;
 
 export const Form = styled.form`

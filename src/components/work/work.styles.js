@@ -1,9 +1,8 @@
 import styled from "styled-components";
+import { Section } from "../shared/components.styles";
 
-export const MyWork = styled.div`
-	min-height: 100vh;
-	padding-top: 5rem;
-	padding-bottom: 2rem;
+export const MyWork = styled(Section)`
+	// min-height: 100vh;
 `;
 
 export const Projects = styled.div`
