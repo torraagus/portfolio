@@ -50,7 +50,7 @@ export const Button = styled.a`
 
 	:hover {
 		cursor: pointer;
-		background-color: #278ea5;
+		opacity: 90%;
 	}
 
 	@media (max-width: 768px) {
