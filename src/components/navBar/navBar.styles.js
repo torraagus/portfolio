@@ -91,24 +91,34 @@ export const MenuItem = styled.li`
 		font-weight: 700;
 	}
 
-	:hover {
-		cursor: pointer;
-		color: #21e6c1;
-	}
-
 	@media (max-width: 768px) {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		padding: 0;
 		margin: 0;
-		height: 20%;
 
 		:hover {
-			background-color: #21e6c1;
-			color: white;
 			font-weight: bold;
+			cursor: pointer;
+			background-color: #21e6c1;
 		}
+		
+		:hover > a {
+			color: white;
+		}
+	}
+	`;
+	
+	export const Item = styled.a`
+	color: #1f4287;
+	text-decoration: none;
+	padding: 1rem 0 1rem 0;
+	border-bottom: 1px solid #eee;
+	width: 100%;
+	
+	:hover {
+		color: #21e6c1;
 	}
 `;
 
