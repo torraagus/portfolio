@@ -6,6 +6,7 @@ import {
 	Button,
 	Menu,
 	MenuItem,
+	Item,
 	BurguerMenu,
 	MenuLine,
 } from "./navBar.styles";
@@ -23,7 +24,11 @@ export const NavBar = () => {
 				</div> */}
 			<Menu className={`${isOpen ? "menuActive" : ""}`}>
 				{menuItems.map((item) => (
-					<MenuItem>{item}</MenuItem>
+					<MenuItem key={item}>
+						<Item href={`#${String(item).replace(" ", "-").toLowerCase()}`}>
+							{item}
+						</Item>
+					</MenuItem>
 				))}
 			</Menu>
 			<BurguerMenu onClick={() => setIsOpen(!isOpen)}>
