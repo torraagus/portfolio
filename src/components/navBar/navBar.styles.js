@@ -47,6 +47,7 @@ export const Button = styled.a`
 	font-weight: bold;
 	border-radius: 15px;
 	font-size: 14px;
+	text-decoration: none;
 
 	:hover {
 		cursor: pointer;
