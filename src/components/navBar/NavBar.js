@@ -18,7 +18,7 @@ export const NavBar = () => {
 	return (
 		<Nav>
 			<Logo>AIT</Logo>
-			<Button>See my work</Button>
+			<Button href="#my-work">See my work</Button>
 			{/* <div style={{ display: "flex" }}>
 					<Button>Resume</Button>
 				</div> */}
