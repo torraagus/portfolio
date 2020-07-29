@@ -25,7 +25,10 @@ export const NavBar = () => {
 			<Menu className={`${isOpen ? "menuActive" : ""}`}>
 				{menuItems.map((item) => (
 					<MenuItem key={item}>
-						<Item href={`#${String(item).replace(" ", "-").toLowerCase()}`}>
+						<Item
+							href={`#${String(item).replace(" ", "-").toLowerCase()}`}
+							onClick={() => setIsOpen(false)}
+						>
 							{item}
 						</Item>
 					</MenuItem>
