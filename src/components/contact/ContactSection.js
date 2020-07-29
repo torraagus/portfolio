@@ -4,7 +4,7 @@ import { Title, Subtitle } from "../shared/components.styles";
 
 export const ContactSection = () => {
 	return (
-		<Contact>
+		<Contact id="contact">
 			<Title>Contact Me</Title>
 			<Subtitle>Use the following form to contact me</Subtitle>
 			<Form>
