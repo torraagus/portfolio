@@ -4,7 +4,7 @@ import { Title, Subtitle } from "../shared/components.styles";
 
 export const AboutMeSection = () => {
 	return (
-		<AboutMe>
+		<AboutMe id="about-me">
 			<Title color="#071e3d">About me</Title>
 			<Subtitle>Some things about myself</Subtitle>
 			<Description>
