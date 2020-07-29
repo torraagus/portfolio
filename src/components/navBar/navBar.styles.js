@@ -87,6 +87,10 @@ export const MenuItem = styled.li`
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
 
+	:nth-child(1) {
+		font-weight: 700;
+	}
+
 	:hover {
 		cursor: pointer;
 		color: #21e6c1;
