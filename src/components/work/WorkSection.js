@@ -37,38 +37,36 @@ export const WorkSection = () => {
 	];
 
 	return (
-		<MyWork>
+		<MyWork id="my-work">
 			<Title>My work</Title>
 			<Subtitle>A little bit of what i am capable of doing.</Subtitle>
 			<Projects>
 				<Title size={20}>Projects</Title>
 				{projects.map((p) => (
-					<>
-						<Project>
-							<Image src={p.thumbail} />
-							<ProjectInfo>
-								<Title size={28}>{p.name}</Title>
-								<Subtitle>{p.subtitle}</Subtitle>
-								<Description>{p.description}</Description>
-								<Title size={14}>For the backend</Title>
-								<Technologies>
-									{p.backend.map((bt) => (
-										<TechItem key={bt}>{bt}</TechItem>
-									))}
-								</Technologies>
-								<Title size={14}>For the frontend</Title>
-								<Technologies>
-									{p.frontend.map((ft) => (
-										<TechItem key={ft}>{ft}</TechItem>
-									))}
-								</Technologies>
-								<Buttons>
-									<LiveVersionBtn>Live</LiveVersionBtn>
-									<GithubBtn>Git</GithubBtn>
-								</Buttons>
-							</ProjectInfo>
-						</Project>
-					</>
+					<Project key={p.name}>
+						<Image src={p.thumbail} />
+						<ProjectInfo>
+							<Title size={28}>{p.name}</Title>
+							<Subtitle>{p.subtitle}</Subtitle>
+							<Description>{p.description}</Description>
+							<Title size={14}>For the backend</Title>
+							<Technologies>
+								{p.backend.map((bt) => (
+									<TechItem key={bt}>{bt}</TechItem>
+								))}
+							</Technologies>
+							<Title size={14}>For the frontend</Title>
+							<Technologies>
+								{p.frontend.map((ft) => (
+									<TechItem key={ft}>{ft}</TechItem>
+								))}
+							</Technologies>
+							<Buttons>
+								<LiveVersionBtn>Live</LiveVersionBtn>
+								<GithubBtn>Git</GithubBtn>
+							</Buttons>
+						</ProjectInfo>
+					</Project>
 				))}
 			</Projects>
 		</MyWork>
