@@ -1,13 +1,32 @@
 import styled from "styled-components";
 
 export const Nav = styled.nav`
+	position: fixed;
+	width: 100vw;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	background-color: white;
-	height: 8vh;
+	min-height: 8vh;
+	-webkit-box-shadow: 10px 10px 5px 0px #651a1b31;
+	-moz-box-shadow: 10px 10px 5px 0px #651a1b2f;
+	box-shadow: 5px 5px 5px 0px #651a1b27;
+	z-index: 350;
 
 	@media (max-width: 768px) {
+		width: 96vw;
+		padding: 0 1rem 0 1rem;
+		justify-content: space-between;
+	}
+
+	@media (max-width: 512px) {
+		width: 94vw;
+		padding: 0 1rem 0 1rem;
+		justify-content: space-between;
+	}
+
+	@media (max-width: 384px) {
+		width: 92vw;
 		padding: 0 1rem 0 1rem;
 		justify-content: space-between;
 	}
