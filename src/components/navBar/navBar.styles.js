@@ -104,22 +104,25 @@ export const MenuItem = styled.li`
 			cursor: pointer;
 			background-color: #21e6c1;
 		}
-		
+
 		:hover > a {
 			color: white;
 		}
 	}
-	`;
-	
-	export const Item = styled.a`
+`;
+
+export const Item = styled.a`
 	color: #1f4287;
 	text-decoration: none;
 	padding: 1rem 0 1rem 0;
-	border-bottom: 1px solid #eee;
 	width: 100%;
-	
+
 	:hover {
 		color: #21e6c1;
+	}
+
+	@media (max-width: 768px) {
+		border-bottom: 1px solid #eee;
 	}
 `;
 
