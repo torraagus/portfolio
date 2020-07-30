@@ -17,18 +17,20 @@ import { Title, Subtitle } from "../shared/components.styles";
 export const WorkSection = () => {
 	const projects = [
 		{
-			name: "Vehicles",
+			name: "Vessel",
 			subtitle: "Web app of shipping businesses",
-			description: "This app allow...",
+			description:
+				"This app allows shipping businesses to upload their vessels and be contacted by other businesses...",
 			thumbail:
 				"https://www.tu-app.net/blog/wp-content/uploads/2019/05/Web-App-Amazon-FilmAffinity.jpg",
 			backend: ["node", "express", "mongodb", "docker"],
 			frontend: ["html", "css", "javascript", "react", "styled-components"],
 		},
 		{
-			name: "Supplieirs",
-			subtitle: "Web app of suppliers businesses",
-			description: "This app allow...",
+			name: "Turnar",
+			subtitle: "Web app of turn reservations",
+			description:
+				"This app allows shipping businesses to upload their vessels and be contacted by other businesses --- This app allows shipping businesses to upload their vessels and be contacted by other businesses...",
 			thumbail:
 				"https://www.tu-app.net/blog/wp-content/uploads/2019/05/Web-App-Amazon-FilmAffinity.jpg",
 			backend: ["node", "express", "mongodb", "docker"],
