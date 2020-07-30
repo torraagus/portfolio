@@ -29,6 +29,7 @@ export const TextInput = styled.input`
 	margin-top: 0.5rem;
 	margin-bottom: 1rem;
 	padding-left: 1rem;
+	border: none;
 `;
 
 export const TextArea = styled.textarea`
@@ -39,6 +40,7 @@ export const TextArea = styled.textarea`
 	margin-top: 0.5rem;
 	margin-bottom: 1rem;
 	padding: 1rem 0 0 1rem;
+	border: none;
 `;
 
 export const SendButton = styled.input`
