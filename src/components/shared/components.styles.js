@@ -18,4 +18,5 @@ export const Subtitle = styled.p`
 	font-weight: 600;
 	margin: 0;
 	padding: 0;
+	letter-spacing: 2px;
 `;
