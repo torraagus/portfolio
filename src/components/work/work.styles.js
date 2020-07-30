@@ -1,9 +1,7 @@
 import styled from "styled-components";
 import { Section } from "../shared/components.styles";
 
-export const MyWork = styled(Section)`
-	// min-height: 100vh;
-`;
+export const MyWork = styled(Section)``;
 
 export const Projects = styled.div`
 	margin-top: 3rem;
@@ -21,22 +19,31 @@ export const Project = styled.div`
 `;
 
 export const Image = styled.img`
-	width: 150px;
+	max-width: 90vw;
 	height: 150px;
 	background-color: tomato;
 	margin-bottom: 1rem;
-
-	@media (max-width: 768px) {
-		width: 90vw;
-	}
 `;
 
 export const Description = styled.p`
 	color: white;
 `;
 export const ProjectInfo = styled.div`
-	padding-left: 2rem;
 	text-align: left;
+	max-width: 90%;
+
+	@media (min-width: 768px) {
+		padding-left: 2rem;
+		max-width: 35%;
+	}
+
+	@media (max-width: 768px) {
+		max-width: 60%;
+	}
+
+	@media (max-width: 512px) {
+		max-width: 90%;
+	}
 `;
 
 export const Technologies = styled.ul`
@@ -56,24 +63,33 @@ export const TechItem = styled.li`
 
 export const Buttons = styled.div`
 	display: flex;
+	max-width: 90vw;
+
+	@media (min-width: 768px) {
+		max-width: 60%;
+	}
+
+	@media (min-width: 512px) {
+		max-width: 75%;
+	}
 `;
 
 export const GithubBtn = styled.div`
 	height: 50px;
-	width: 150px;
-    color: #071e3d;
+	width: 50%;
+	color: #071e3d;
 	background-color: white;
 	text-align: center;
 	line-height: 50px;
-    font-weight: bold;
-    
-    :hover {
-        cursor: pointer;
-        opacity: 90%;
-    }
+	font-weight: bold;
+
+	:hover {
+		cursor: pointer;
+		opacity: 90%;
+	}
 `;
 
 export const LiveVersionBtn = styled(GithubBtn)`
-    background-color: #21e6c1;
-    margin-right: .25rem;
+	background-color: #21e6c1;
+	margin-right: 0.25rem;
 `;
