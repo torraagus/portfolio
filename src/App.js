@@ -7,6 +7,7 @@ import { MainSection } from "./components/main/MainSection";
 import { WorkSection } from "./components/work/WorkSection";
 import { AboutMeSection } from "./components/about/AboutMe";
 import { ContactSection } from "./components/contact/ContactSection";
+import ScrollArrow from "./components/scrollArrow/ScrollArrow";
 
 function App() {
 	return (
@@ -15,7 +16,8 @@ function App() {
 			<MainSection />
 			<WorkSection />
 			<AboutMeSection />			
-			<ContactSection />
+      <ContactSection />
+      <ScrollArrow />
 			{/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
