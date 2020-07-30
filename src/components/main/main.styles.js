@@ -31,6 +31,7 @@ export const Button = styled.a`
 	border-radius: 15px;
 	font-weight: bold;
 	margin-top: 0.5rem;
+	text-decoration: none;
 
 	:hover {
 		opacity: 90%;
