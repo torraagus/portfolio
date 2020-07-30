@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 export const Main = styled.div`
-	height: 90vh;
+	min-height: 90vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	background: #1f4287;
+	padding: 0 2vw 0 2vw;
 `;
 
 export const Name = styled.h3`
