@@ -37,6 +37,56 @@ export const Logo = styled.div`
 	font-weight: bold;
 	letter-spacing: 3px;
 	font-size: 18px;
+
+	animation: myAnimation infinite 5s;
+
+	@keyframes myAnimation {
+		0% {
+			color: #21e6c1;
+		}
+		25% {
+			color: #278ea5;
+		}
+		50% {
+			color: #1f4287;
+		}
+		75% {
+			color: #278ea5;
+		}
+		100% {
+			color: #21e6c1;
+		}
+	}
+`;
+
+export const NavButtons = styled.div`
+	display: flex;
+
+	animation: move infinite 10s ease;
+
+	@keyframes move {
+		1% {
+			transform: translateX(5px);
+		}
+		2% {
+			transform: translateX(-5px);
+		}
+		3% {
+			transform: translateX(3px);
+		}
+		4% {
+			transform: translateX(-3px);
+		}
+		5% {
+			transform: translateX(1px);
+		}
+		6% {
+			transform: translateX(0px);
+		}
+		100% {
+			transform: translate(0px);
+		}
+	}
 `;
 
 export const Button = styled.a`
@@ -45,7 +95,7 @@ export const Button = styled.a`
 	background-color: #21e6c1;
 	color: white;
 	font-weight: bold;
-	border-radius: 15px;
+	border-radius: 15px 0 0 15px;
 	font-size: 14px;
 	text-decoration: none;
 
@@ -57,6 +107,12 @@ export const Button = styled.a`
 	@media (max-width: 768px) {
 		display: block;
 	}
+`;
+
+export const ResumeBtn = styled(Button)`
+	background-color: #278ea5;
+	color: white;
+	border-radius: 0 15px 15px 0;
 `;
 
 export const Menu = styled.ul`
