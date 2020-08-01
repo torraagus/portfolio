@@ -34,12 +34,16 @@ export const Nav = styled.nav`
 
 export const BlackScreen = styled.div`
 	position: absolute;
-	display: ${(props) => (props.show ? "block" : "none")};
+	display: none;
 	height: 600vh;
 	width: 100vw;
 	background-color: #000;
 	opacity: 50%;
 	z-index: 2;
+	
+	@media (max-width: 768px) {
+		display: ${(props) => (props.show ? "block" : "none")};
+	}
 `;
 
 export const Logo = styled.div`
