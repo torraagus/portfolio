@@ -11,7 +11,7 @@ export const Nav = styled.nav`
 	-webkit-box-shadow: 10px 10px 5px 0px #651a1b31;
 	-moz-box-shadow: 10px 10px 5px 0px #651a1b2f;
 	box-shadow: 5px 5px 5px 0px #651a1b27;
-	z-index: 350;
+	z-index: 3;
 
 	@media (max-width: 768px) {
 		width: 96vw;
@@ -30,6 +30,16 @@ export const Nav = styled.nav`
 		padding: 0 1rem 0 1rem;
 		justify-content: space-between;
 	}
+`;
+
+export const BlackScreen = styled.div`
+	position: absolute;
+	display: ${(props) => (props.show ? "block" : "none")};
+	height: 600vh;
+	width: 100vw;
+	background-color: #000;
+	opacity: 50%;
+	z-index: 2;
 `;
 
 export const Logo = styled.div`
