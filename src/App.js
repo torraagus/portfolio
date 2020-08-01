@@ -15,9 +15,9 @@ function App() {
 			<NavBar />
 			<MainSection />
 			<WorkSection />
-			<AboutMeSection />			
-      <ContactSection />
-      <ScrollArrow />
+			<AboutMeSection />
+			<ContactSection />
+			<ScrollArrow />
 			{/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
