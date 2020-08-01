@@ -3,7 +3,9 @@ import styled from "styled-components";
 import {
 	Nav,
 	Logo,
+	NavButtons,
 	Button,
+	ResumeBtn,
 	Menu,
 	MenuItem,
 	Item,
@@ -12,24 +14,28 @@ import {
 } from "./navBar.styles";
 
 export const NavBar = () => {
-	const menuItems = ["My work", "Resume", "Github", "About me", "Contact"];
+	const menuItems = [
+		{ name: "My work", path: "#my-work" },
+		{ name: "Resume", path: "resume" },
+		{ name: "Github", path: "https://github.com/torraagus" },
+		{ name: "Linkedin", path: "https://www.linkedin.com/in/torraagustin" },
+		{ name: "About me", path: "#about-me" },
+		{ name: "Contact", path: "#contact" },
+	];
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
 		<Nav>
 			<Logo>AIT</Logo>
-			<Button href="#my-work">See my work</Button>
-			{/* <div style={{ display: "flex" }}>
-					<Button>Resume</Button>
-				</div> */}
+			<NavButtons>
+				<Button href="#my-work">My work</Button>
+				<ResumeBtn>Resume</ResumeBtn>
+			</NavButtons>
 			<Menu className={`${isOpen ? "menuActive" : ""}`}>
 				{menuItems.map((item) => (
-					<MenuItem key={item}>
-						<Item
-							href={`#${String(item).replace(" ", "-").toLowerCase()}`}
-							onClick={() => setIsOpen(false)}
-						>
-							{item}
+					<MenuItem key={item.name}>
+						<Item href={item.path} onClick={() => setIsOpen(false)}>
+							{item.name}
 						</Item>
 					</MenuItem>
 				))}
