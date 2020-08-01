@@ -25,31 +25,31 @@ export const NavBar = () => {
 	];
 	const [isOpen, setIsOpen] = useState(false);
 
-	const handleOnClick = () => {
-		setIsOpen(!isOpen);
+	const handleOnClick = (val) => {
+		setIsOpen(val);
 	};
 
 	return (
 		<>
-			<BlackScreen show={isOpen} onClick={handleOnClick} />
+			<BlackScreen show={isOpen} onClick={() => handleOnClick(false)} />
 			<Nav>
 				<Logo>AIT</Logo>
 				<NavButtons>
-					<Button href="#my-work" onClick={handleOnClick}>
+					<Button href="#my-work" onClick={() => handleOnClick(false)}>
 						My work
 					</Button>
-					<ResumeBtn onClick={handleOnClick}>Resume</ResumeBtn>
+					<ResumeBtn onClick={() => handleOnClick(false)}>Resume</ResumeBtn>
 				</NavButtons>
 				<Menu className={`${isOpen ? "menuActive" : ""}`}>
 					{menuItems.map((item) => (
 						<MenuItem key={item.name}>
-							<Item href={item.path} onClick={handleOnClick}>
+							<Item href={item.path} onClick={() => handleOnClick(false)}>
 								{item.name}
 							</Item>
 						</MenuItem>
 					))}
 				</Menu>
-				<BurguerMenu onClick={handleOnClick}>
+				<BurguerMenu onClick={() => handleOnClick(!isOpen)}>
 					<MenuLine className={`${isOpen ? "toggle" : ""} line1`} />
 					<MenuLine className={`${isOpen ? "toggle" : ""} line2`} />
 					<MenuLine className={`${isOpen ? "toggle" : ""} line3`} />
