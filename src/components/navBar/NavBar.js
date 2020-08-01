@@ -11,6 +11,7 @@ import {
 	Item,
 	BurguerMenu,
 	MenuLine,
+	BlackScreen
 } from "./navBar.styles";
 
 export const NavBar = () => {
@@ -24,27 +25,36 @@ export const NavBar = () => {
 	];
 	const [isOpen, setIsOpen] = useState(false);
 
+	const handleOnClick = () => {
+		setIsOpen(!isOpen);
+	};
+
 	return (
-		<Nav>
-			<Logo>AIT</Logo>
-			<NavButtons>
-				<Button href="#my-work">My work</Button>
-				<ResumeBtn>Resume</ResumeBtn>
-			</NavButtons>
-			<Menu className={`${isOpen ? "menuActive" : ""}`}>
-				{menuItems.map((item) => (
-					<MenuItem key={item.name}>
-						<Item href={item.path} onClick={() => setIsOpen(false)}>
-							{item.name}
-						</Item>
-					</MenuItem>
-				))}
-			</Menu>
-			<BurguerMenu onClick={() => setIsOpen(!isOpen)}>
-				<MenuLine className={`${isOpen ? "toggle" : ""} line1`} />
-				<MenuLine className={`${isOpen ? "toggle" : ""} line2`} />
-				<MenuLine className={`${isOpen ? "toggle" : ""} line3`} />
-			</BurguerMenu>
-		</Nav>
+		<>
+			<BlackScreen show={isOpen} onClick={handleOnClick} />
+			<Nav>
+				<Logo>AIT</Logo>
+				<NavButtons>
+					<Button href="#my-work" onClick={handleOnClick}>
+						My work
+					</Button>
+					<ResumeBtn onClick={handleOnClick}>Resume</ResumeBtn>
+				</NavButtons>
+				<Menu className={`${isOpen ? "menuActive" : ""}`}>
+					{menuItems.map((item) => (
+						<MenuItem key={item.name}>
+							<Item href={item.path} onClick={handleOnClick}>
+								{item.name}
+							</Item>
+						</MenuItem>
+					))}
+				</Menu>
+				<BurguerMenu onClick={handleOnClick}>
+					<MenuLine className={`${isOpen ? "toggle" : ""} line1`} />
+					<MenuLine className={`${isOpen ? "toggle" : ""} line2`} />
+					<MenuLine className={`${isOpen ? "toggle" : ""} line3`} />
+				</BurguerMenu>
+			</Nav>
+		</>
 	);
 };
