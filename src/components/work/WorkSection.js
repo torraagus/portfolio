@@ -23,18 +23,28 @@ export const WorkSection = () => {
 				"This app allows shipping businesses to upload their vessels and be contacted by other businesses...",
 			thumbail:
 				"https://www.tu-app.net/blog/wp-content/uploads/2019/05/Web-App-Amazon-FilmAffinity.jpg",
-			backend: ["node", "express", "mongodb", "docker"],
-			frontend: ["html", "css", "javascript", "react", "styled-components"],
+			backend: ["Node", "express", "mongodb", "docker"],
+			frontend: ["React", "styled-components", "typescript"],
 		},
 		{
-			name: "Turnar",
-			subtitle: "Web app of turn reservations",
+			name: "Movies",
+			subtitle: "Web app of movies",
 			description:
 				"This app allows shipping businesses to upload their vessels and be contacted by other businesses --- This app allows shipping businesses to upload their vessels and be contacted by other businesses...",
 			thumbail:
 				"https://www.tu-app.net/blog/wp-content/uploads/2019/05/Web-App-Amazon-FilmAffinity.jpg",
-			backend: ["node", "express", "mongodb", "docker"],
-			frontend: ["html", "css", "javascript", "react", "styled-components"],
+			backend: ["Consume of 3rd party movies api"],
+			frontend: ["React", "styled-components", "typescript"],
+		},
+		{
+			name: "Payme",
+			subtitle: "Web app of payments",
+			description:
+				"This app allows shipping businesses to upload their vessels and be contacted by other businesses --- This app allows shipping businesses to upload their vessels and be contacted by other businesses...",
+			thumbail:
+				"https://www.tu-app.net/blog/wp-content/uploads/2019/05/Web-App-Amazon-FilmAffinity.jpg",
+			backend: ["Node", "express", "mongodb", "docker", "mercado pago api"],
+			frontend: ["React", "styled-components", "typescript"],
 		},
 	];
 
