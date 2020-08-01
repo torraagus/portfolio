@@ -6,6 +6,7 @@ export const Contact = styled(Section)`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	min-height: 100vh;
 `;
 
 export const Form = styled.form`
