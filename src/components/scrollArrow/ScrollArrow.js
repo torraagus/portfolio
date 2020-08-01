@@ -8,7 +8,7 @@ const Arrow = styled.div`
 	position: fixed;
 	right: 2rem;
 	bottom: 2rem;
-	z-index: 100;
+	z-index: 1;
 	cursor: pointer;
 	animation: fadeIn 1s;
 	transition: opacity 1s;
