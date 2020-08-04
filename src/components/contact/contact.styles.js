@@ -123,3 +123,27 @@ export const SendButton = styled.input`
 		width: 100%;
 	}
 `;
+
+export const Alert = styled.p`
+	font-size: 14px;
+	letter-spacing: 2px;
+	padding: 1rem;
+	width: 40%;
+	border-radius: 15px;
+	background-color: ${(props) =>
+		props.type == "error" ? "#ff304f" : "#21e6c1"};
+	color: ${(props) => (props.type == "error" ? "white" : "white")};
+
+	@media (max-width: 1800px) {
+		width: 50%;
+	}
+	@media (max-width: 1024px) {
+		width: 70%;
+	}
+	@media (max-width: 768px) {
+		width: 80%;
+	}
+	@media (max-width: 512px) {
+		width: 90%;
+	}
+`;
