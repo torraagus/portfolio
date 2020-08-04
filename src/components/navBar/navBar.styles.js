@@ -37,8 +37,7 @@ export const BlackScreen = styled.div`
 	display: none;
 	height: 600vh;
 	width: 100vw;
-	background-color: #000;
-	opacity: 50%;
+	background-color: rgba(0, 0, 0, 0.5);
 	z-index: 2;
 	
 	@media (max-width: 768px) {
