@@ -22,5 +22,11 @@ app.use(
 );
 app.use("/api/projects", require("./routes/projects.routes"));
 app.use("/api/login", require("./routes/login.routes"));
+app.get("/download", (req, res) => {
+	res.download(
+		path.join(__dirname, "..") + "/cv_español.pdf",
+		"cv_español.pdf"
+	);
+});
 
 module.exports = app;
