@@ -28,5 +28,27 @@ app.get("/download", (req, res) => {
 		"cv_español.pdf"
 	);
 });
+app.post("/send-email", (req, res) => {
+	const nodemailer = require("nodemailer");
+
+	const transporter = nodemailer.createTransport({
+		service: "gmail",
+		auth: {
+			user: process.env.EMAIL,
+			pass: process.env.PASSWORD,
+		},
+	});
+
+	const mailOptions = {
+		from: req.body.from,
+		to: process.env.EMAIL,
+		subject: `${req.body.subject} (${req.body.from})`,
+		text: req.body.message,
+	};
+
+	transporter.sendMail(mailOptions, (error, info) => {
+		error ? res.send(error) : res.send(info.response);
+	});
+});
 
 module.exports = app;
