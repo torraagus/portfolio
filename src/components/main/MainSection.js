@@ -7,7 +7,7 @@ export const MainSection = () => {
 			<Name>Agustin Ignacio Torra</Name>
 			<Rol>React web developer</Rol>
 			<Button href="#my-work">See my work</Button>
-			<ResumeBtn>Resume</ResumeBtn>
+			<ResumeBtn href="./download">Resume</ResumeBtn>
 		</Main>
 	);
 };
