@@ -11,13 +11,13 @@ import {
 	Item,
 	BurguerMenu,
 	MenuLine,
-	BlackScreen
+	BlackScreen,
 } from "./navBar.styles";
 
 export const NavBar = () => {
 	const menuItems = [
 		{ name: "My work", path: "#my-work" },
-		{ name: "Resume", path: "resume" },
+		{ name: "Resume", path: "/download" },
 		{ name: "Github", path: "https://github.com/torraagus" },
 		{ name: "Linkedin", path: "https://www.linkedin.com/in/torraagustin" },
 		{ name: "About me", path: "#about-me" },
@@ -38,7 +38,9 @@ export const NavBar = () => {
 					<Button href="#my-work" onClick={() => handleOnClick(false)}>
 						My work
 					</Button>
-					<ResumeBtn onClick={() => handleOnClick(false)}>Resume</ResumeBtn>
+					<ResumeBtn href="/download" onClick={() => handleOnClick(false)}>
+						Resume
+					</ResumeBtn>
 				</NavButtons>
 				<Menu className={`${isOpen ? "menuActive" : ""}`}>
 					{menuItems.map((item) => (
