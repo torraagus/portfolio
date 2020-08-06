@@ -24,7 +24,7 @@ app.use("/api/projects", require("./routes/projects.routes"));
 app.use("/api/login", require("./routes/login.routes"));
 app.get("/download", (req, res) => {
 	const { lg } = req.query;
-	const filename = lg == "es" ? "cvs/cv_spanish.pdf" : "cvs/cv_english.pdf";
+	const filename = lg == "es" ? "/cvs/cv_spanish.pdf" : "/cvs/cv_english.pdf";
 	res.download(path.join(__dirname, "..") + filename, filename);
 });
 app.post("/send-email", (req, res) => {
