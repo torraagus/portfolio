@@ -13,7 +13,8 @@ import {
 	MenuLine,
 	BlackScreen,
 } from "./navBar.styles";
-import MyModal from "../modal/Modal";
+import MyModal from "../shared/modal/Modal";
+import ResumeModal from "../resumeModal/ResumeModal";
 import useModal from "../../hooks/UseModal";
 
 export const NavBar = () => {
@@ -39,12 +40,13 @@ export const NavBar = () => {
 
 	return (
 		<>
-			<MyModal
-				title="Resume"
-				subtitle="Choose language..."
-				isOpen={isModalOpen}
-				onCloseModal={closeModal}
-			></MyModal>
+			<MyModal isOpen={isModalOpen} onCloseModal={closeModal}>
+				<ResumeModal
+					title="Resume"
+					subtitle="Choose a language"
+					onCloseModal={closeModal}
+				/>
+			</MyModal>
 			<BlackScreen show={isOpen} onClick={() => handleOnClick(false)} />
 			<Nav>
 				<Logo>AIT</Logo>
