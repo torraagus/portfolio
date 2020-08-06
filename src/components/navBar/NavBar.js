@@ -14,6 +14,7 @@ import {
 	BlackScreen,
 } from "./navBar.styles";
 import MyModal from "../modal/Modal";
+import useModal from "../../hooks/UseModal";
 
 export const NavBar = () => {
 	const menuItems = [
@@ -25,11 +26,7 @@ export const NavBar = () => {
 		{ name: "Contact", path: "#contact" },
 	];
 	const [isOpen, setIsOpen] = useState(false);
-	const [isModalOpen, setIsModalOpen] = useState(false);
-
-	const closeModal = () => {
-		setIsModalOpen(false);
-	};
+	const { isModalOpen, closeModal, openModal } = useModal();
 
 	const handleOnClick = (val) => {
 		setIsOpen(val);
@@ -37,7 +34,7 @@ export const NavBar = () => {
 
 	const handleOnClickResume = () => {
 		setIsOpen(false);
-		setIsModalOpen(true);
+		openModal();
 	};
 
 	return (
