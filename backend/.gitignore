@@ -1,6 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-cv_español.pdf
+cv_spanish.pdf
+cv_english.pdf
 # settings
 settings.json
 
