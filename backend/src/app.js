@@ -23,10 +23,9 @@ app.use(
 app.use("/api/projects", require("./routes/projects.routes"));
 app.use("/api/login", require("./routes/login.routes"));
 app.get("/download", (req, res) => {
-	res.download(
-		path.join(__dirname, "..") + "/cv_español.pdf",
-		"cv_español.pdf"
-	);
+	const { lg } = req.query;
+	const filename = lg == "es" ? "/cv_spanish.pdf" : "/cv_english.pdf";
+	res.download(path.join(__dirname, "..") + filename, filename);
 });
 app.post("/send-email", (req, res) => {
 	const nodemailer = require("nodemailer");
