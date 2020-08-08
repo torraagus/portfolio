@@ -13,6 +13,14 @@ export const Nav = styled.nav`
 	box-shadow: 5px 5px 5px 0px #651a1b27;
 	z-index: 3;
 
+	@media (max-height: 768px) {
+		min-height: 10vh;
+	}
+
+	@media (max-height: 512px) {
+		min-height: 12vh;
+	}
+
 	@media (max-width: 768px) {
 		width: 96vw;
 		padding: 0 1rem 0 1rem;
@@ -39,7 +47,7 @@ export const BlackScreen = styled.div`
 	width: 100vw;
 	background-color: rgba(0, 0, 0, 0.5);
 	z-index: 2;
-	
+
 	@media (max-width: 768px) {
 		display: ${(props) => (props.show ? "block" : "none")};
 	}
