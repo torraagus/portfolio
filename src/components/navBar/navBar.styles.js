@@ -187,6 +187,7 @@ export const Item = styled.a`
 	width: 100%;
 
 	:hover {
+		cursor: pointer;
 		color: #21e6c1;
 	}
 
