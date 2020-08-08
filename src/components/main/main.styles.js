@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Main = styled.div`
-	min-height: 90vh;
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
