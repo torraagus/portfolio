@@ -63,7 +63,7 @@ export const WorkSection = () => {
 	return (
 		<MyWork id="my-work">
 			<Title>My work</Title>
-			<Subtitle>Here are some projects...</Subtitle>
+			<Subtitle>Here are some projects you can watch and test...</Subtitle>
 			<Projects>
 				<Title size={20}>Projects</Title>
 				{projects.length > 0 &&
