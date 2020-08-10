@@ -7,7 +7,7 @@ export const Main = styled.div`
 	justify-content: center;
 	align-items: center;
 	background: #1f4287;
-	padding: 0 2vw 0 2vw;
+	padding: 0 3vw 0 3vw;
 `;
 
 export const Name = styled.h3`
