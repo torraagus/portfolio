@@ -158,6 +158,16 @@ export const Menu = styled.ul`
 		transform: translateX(100%);
 		transition: transform 0.3s ease;
 	}
+
+	@media ((max-height: 768px) and (max-width: 768px)) {
+		top: 10vh;
+		height: 90vh;
+	}
+
+	@media ((max-height: 512px) and (max-width: 768px)) {
+		top: 12vh;
+		height: 88vh;
+	}
 `;
 
 export const MenuItem = styled.li`
