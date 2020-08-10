@@ -21,6 +21,7 @@ app.use(
 	require("./routes/users.routes")
 );
 app.use("/api/projects", require("./routes/projects.routes"));
+app.use("/api/about", require("./routes/about.routes"));
 app.use("/api/login", require("./routes/login.routes"));
 app.get("/download", (req, res) => {
 	const { lg } = req.query;
