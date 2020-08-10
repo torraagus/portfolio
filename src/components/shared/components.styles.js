@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Section = styled.div`
 	// padding-top: 12vh;
 	// padding-bottom: 10vh;
-	padding: 12vh 5vw 10vh 5vw;
+	padding: 15vh 5vw 10vh 5vw;
 `;
 
 export const Title = styled.h1`
