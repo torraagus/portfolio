@@ -6,18 +6,16 @@ import {
 	Form,
 	Label,
 	TextArea,
-	Alert
+	Alert,
 } from "./contact.styles";
 import { Title, Subtitle } from "../shared/components.styles";
-import Axios from "axios";
+import useEmail from "../../hooks/UseEmail";
 
 export const ContactSection = () => {
-	const [error, setError] = useState(null);
-	const [sent, setSent] = useState(false);
-	const [sending, setSending] = useState(false);
 	const [subject, setSubject] = useState("");
 	const [from, setFrom] = useState("");
 	const [message, setMessage] = useState("");
+	const { error, sendEmail, sending, sent, setError } = useEmail();
 
 	const sendBtnRef = useRef(null);
 
@@ -27,36 +25,11 @@ export const ContactSection = () => {
 			setError("Please complete all the fields");
 			return;
 		}
-		setSending(true);
-		Axios.post("/send-email", {
+		sendEmail({
 			from,
 			subject,
 			message,
-		})
-			.then((res) => {
-				setSent(true);
-				setError(null);
-				console.log(res);
-			})
-			.catch((err) => {
-				setSent(false);
-				setError(`${err}`);
-				console.log(err);
-			}).finally(() => {
-				setSending(false);
-				setTimeout(() => {
-					resetForm();
-				}, 3000);
-			});
-	};
-
-	const resetForm = () => {
-		setSent(false);
-		setSending(false);
-		setError(null);
-		setFrom("");
-		setSubject("");
-		setMessage("");
+		});
 	};
 
 	useEffect(() => {
@@ -78,7 +51,7 @@ export const ContactSection = () => {
 	return (
 		<Contact id="contact">
 			<Title>Contact</Title>
-			<Subtitle>Use the following form to contact me</Subtitle>
+			<Subtitle>You can use this form to contact me</Subtitle>
 			{sent && <Alert type="success">Email enviado con exito </Alert>}
 			{error && <Alert type="error">{error}</Alert>}
 			<Form onSubmit={onSubmit}>
