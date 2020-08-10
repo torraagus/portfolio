@@ -20,9 +20,28 @@ export const Project = styled.div`
 
 export const Image = styled.img`
 	max-width: 90vw;
-	height: 150px;
-	background-color: tomato;
+	height: 200px;
 	margin-bottom: 1rem;
+
+	@media (max-width: 1920px) {
+		height: 300px;
+	}
+
+	@media (max-width: 1024px) {
+		height: 250px;
+	}
+
+	@media (max-width: 768px) {
+		height: 225px;
+	}
+
+	@media (max-width: 512px) {
+		height: 200px;
+	}
+
+	@media (max-width: 384px) {
+		height: 150px;
+	}
 `;
 
 export const Description = styled.p`
