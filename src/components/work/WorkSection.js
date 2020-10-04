@@ -14,42 +14,9 @@ import {
 } from "./work.styles";
 import { Title, Subtitle } from "../shared/components.styles";
 import Axios from "axios";
-import styled from "styled-components";
 
 export const WorkSection = () => {
 	const [projects, setProjects] = useState([]);
-	// const projects = [
-	// 	{
-	// 		name: "Vessel",
-	// 		subtitle: "Web app of shipping businesses",
-	// 		description:
-	// 			"This app allows shipping businesses to upload their vessels and be contacted by other businesses...",
-	// 		thumbail:
-	// 			"https://www.tu-app.net/blog/wp-content/uploads/2019/05/Web-App-Amazon-FilmAffinity.jpg",
-	// 		backend: ["Node", "express", "mongodb", "docker"],
-	// 		frontend: ["React", "styled-components", "typescript"],
-	// 	},
-	// 	{
-	// 		name: "Movies",
-	// 		subtitle: "Web app of movies",
-	// 		description:
-	// 			"This app allows shipping businesses to upload their vessels and be contacted by other businesses --- This app allows shipping businesses to upload their vessels and be contacted by other businesses...",
-	// 		thumbail:
-	// 			"https://www.tu-app.net/blog/wp-content/uploads/2019/05/Web-App-Amazon-FilmAffinity.jpg",
-	// 		backend: ["Consume of 3rd party movies api"],
-	// 		frontend: ["React", "styled-components", "typescript"],
-	// 	},
-	// 	{
-	// 		name: "Payme",
-	// 		subtitle: "Web app of payments",
-	// 		description:
-	// 			"This app allows shipping businesses to upload their vessels and be contacted by other businesses --- This app allows shipping businesses to upload their vessels and be contacted by other businesses...",
-	// 		thumbail:
-	// 			"https://www.tu-app.net/blog/wp-content/uploads/2019/05/Web-App-Amazon-FilmAffinity.jpg",
-	// 		backend: ["Node", "express", "mongodb", "docker", "mercado pago api"],
-	// 		frontend: ["React", "styled-components", "typescript"],
-	// 	},
-	// ];
 
 	useEffect(() => {
 		Axios.get("/api/projects")
@@ -63,7 +30,7 @@ export const WorkSection = () => {
 	return (
 		<MyWork id="my-work">
 			<Title>My work</Title>
-			<Subtitle>Here are some projects you can watch and test...</Subtitle>
+			<Subtitle>Here are some projects you can see...</Subtitle>
 			<Projects>
 				<Title size={20}>Projects</Title>
 				{projects.length > 0 &&
