@@ -21,7 +21,7 @@ export const ContactSection = () => {
 
 	const onSubmit = (e) => {
 		e.preventDefault();
-		if (subject.length == 0 || from.length == 0 || message.length == 0) {
+		if (subject.length === 0 || from.length === 0 || message.length === 0) {
 			setError("Please complete all the fields");
 			return;
 		}
@@ -34,12 +34,12 @@ export const ContactSection = () => {
 
 	useEffect(() => {
 		setError(null);
-	}, [from, message, subject]);
+	}, [from, message, setError, subject]);
 
 	useEffect(() => {
 		const interval = setInterval(() => {
 			if (sendBtnRef.current) {
-				if (sendBtnRef.current.value == "Sending . . .") {
+				if (sendBtnRef.current.value === "Sending . . .") {
 					sendBtnRef.current.value = "Sending";
 				}
 				sendBtnRef.current.value += " .";

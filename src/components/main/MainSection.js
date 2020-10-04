@@ -17,7 +17,7 @@ export const MainSection = () => {
 				/>
 			</MyModal>
 			<Main>
-				<Name>Hi, my name is Agustin Torra. I am a...</Name>
+				<Name>Hi, i am a...</Name>
 				<Rol>Front end and UI/UX developer</Rol>
 				<Button href="#my-work">See my work</Button>
 				<ResumeBtn onClick={() => openModal()}>Resume</ResumeBtn>

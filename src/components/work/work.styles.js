@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import colors from "../../colors";
 import { Section } from "../shared/components.styles";
 
 export const MyWork = styled(Section)``;
@@ -96,19 +97,27 @@ export const Buttons = styled.div`
 export const GithubBtn = styled.div`
 	height: 50px;
 	width: 50%;
-	color: #071e3d;
+	color: ${colors.primary};
 	background-color: white;
 	text-align: center;
 	line-height: 50px;
 	font-weight: bold;
+	border-radius: 5px;
 
 	:hover {
 		cursor: pointer;
+		opacity: 75%;
+	}
+
+	:active {
+		cursor: pointer;
 		opacity: 90%;
 	}
+
 `;
 
 export const LiveVersionBtn = styled(GithubBtn)`
-	background-color: #21e6c1;
+	background-color: ${colors.primary};
+	color: white;
 	margin-right: 0.25rem;
 `;

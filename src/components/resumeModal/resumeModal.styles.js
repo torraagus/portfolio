@@ -1,15 +1,16 @@
 import styled from "styled-components";
+import colors from "../../colors";
 
 export const ModalTitle = styled.h1`
 	margin: 0;
 	letter-spacing: 2px;
-	color: #1f4287;
+	color: ${colors.fourth};
 `;
 
 export const ModalSubTitle = styled.p`
 	margin-top: 0;
 	letter-spacing: 3px;
-	color: #278ea5;
+	color: ${colors.primary};
 `;
 
 export const SpanishButton = styled.a`
@@ -19,10 +20,9 @@ export const SpanishButton = styled.a`
 	width: 60%;
 	text-align: center;
 	border: none;
-	background-color: #21e6c1;
+	background-color: ${colors.primary};
 	color: white;
 	text-decoration: none;
-	// font-size: 18px;
 	text-transform: uppercase;
 	font-weight: bold;
 	padding: 1rem 2rem 1rem 2rem;
@@ -33,6 +33,11 @@ export const SpanishButton = styled.a`
 
 	:hover {
 		cursor: pointer;
+		opacity: 75%;
+	}
+
+	:active {
+		cursor: pointer;
 		opacity: 90%;
 	}
 `;
@@ -40,10 +45,10 @@ export const SpanishButton = styled.a`
 export const Note = styled.small`
 	margin-top: 1.5rem;
 	margin-bottom: 2rem;
-	color: #aaa;
+	color: ${colors.fourth};
 	font-style: italic;
 `;
 
 export const EnglishButton = styled(SpanishButton)`
-	background-color: #278ea5;
+	background-color: ${colors.secondary};
 `;

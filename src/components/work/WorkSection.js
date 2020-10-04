@@ -14,6 +14,7 @@ import {
 } from "./work.styles";
 import { Title, Subtitle } from "../shared/components.styles";
 import Axios from "axios";
+import colors from "../../colors";
 
 export const WorkSection = () => {
 	const [projects, setProjects] = useState([]);
@@ -41,13 +42,17 @@ export const WorkSection = () => {
 								<Title size={28}>{p.name}</Title>
 								<Subtitle>{p.subtitle}</Subtitle>
 								<Description>{p.description}</Description>
-								<Title size={14}>For the backend</Title>
+								<Title size={14} color={colors.fiveth}>
+									For the backend
+								</Title>
 								<Technologies>
 									{p.backend.map((bt) => (
 										<TechItem key={bt}>{bt}</TechItem>
 									))}
 								</Technologies>
-								<Title size={14}>For the frontend</Title>
+								<Title size={14} color={colors.fiveth}>
+									For the frontend
+								</Title>
 								<Technologies>
 									{p.frontend.map((ft) => (
 										<TechItem key={ft}>{ft}</TechItem>

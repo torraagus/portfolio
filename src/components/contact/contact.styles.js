@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import colors from "../../colors";
 import { Section } from "../shared/components.styles";
 
 export const Contact = styled(Section)`
-	background-color: #278ea5;
+	background-color: ${colors.fourth};
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -97,8 +98,8 @@ export const SendButton = styled.input`
 	border-radius: 5px;
 	margin-top: 0.5rem;
 	margin-bottom: 1rem;
-	background-color: #1f4287;
-	color: #21e6c1;
+	background-color: ${colors.primary};
+	color: white;
 	font-weight: bold;
 	text-transform: uppercase;
 
@@ -131,8 +132,8 @@ export const Alert = styled.p`
 	width: 40%;
 	border-radius: 15px;
 	background-color: ${(props) =>
-		props.type == "error" ? "#ff304f" : "#21e6c1"};
-	color: ${(props) => (props.type == "error" ? "white" : "white")};
+		props.type === "error" ? "#ff304f" : "#21e6c1"};
+	color: ${(props) => (props.type === "error" ? "white" : "white")};
 
 	@media (max-width: 1800px) {
 		width: 50%;

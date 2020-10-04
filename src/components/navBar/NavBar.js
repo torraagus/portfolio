@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import {
 	Nav,
 	Logo,
@@ -57,12 +56,12 @@ export const NavBar = () => {
 					<ResumeBtn onClick={handleOnClickResume}>Resume</ResumeBtn>
 				</NavButtons>
 				<Menu className={`${isOpen ? "menuActive" : ""}`}>
-					{menuItems.map((item) => (
+					{menuItems.map((item, index) => (
 						<MenuItem key={item.name}>
-							{item.name == "Resume" ? (
+							{item.name === "Resume" ? (
 								<Item onClick={handleOnClickResume}>{item.name}</Item>
 							) : (
-								<Item href={item.path} onClick={() => handleOnClick(false)}>
+								<Item href={item.path} target={index === 2 || index === 3 ? '_blank' : '_self'} onClick={() => handleOnClick(false)}>
 									{item.name}
 								</Item>
 							)}

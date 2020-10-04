@@ -1,26 +1,30 @@
 import styled from "styled-components";
+import colors from "../../colors";
 
 export const Nav = styled.nav`
 	position: fixed;
-	width: 100vw;
+	width: 100%;
+	width: -moz-available; /* For Mozzila */
+	width: -webkit-fill-available; /* For Chrome */
+	width: stretch;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	background-color: white;
-	min-height: 8vh;
+	min-height: 10vh;
 	-webkit-box-shadow: 10px 10px 5px 0px #651a1b31;
 	-moz-box-shadow: 10px 10px 5px 0px #651a1b2f;
 	box-shadow: 5px 5px 5px 0px #651a1b27;
 	z-index: 3;
 
-	@media (max-height: 768px) {
+	/* @media (max-height: 768px) {
 		min-height: 10vh;
 	}
 
 	@media (max-height: 512px) {
 		min-height: 12vh;
-	}
-
+	} */
+	/* 
 	@media (max-width: 768px) {
 		width: 96vw;
 		padding: 0 1rem 0 1rem;
@@ -37,7 +41,7 @@ export const Nav = styled.nav`
 		width: 92vw;
 		padding: 0 1rem 0 1rem;
 		justify-content: space-between;
-	}
+	} */
 `;
 
 export const BlackScreen = styled.div`
@@ -54,30 +58,24 @@ export const BlackScreen = styled.div`
 `;
 
 export const Logo = styled.div`
-	color: black;
+	color: ${colors.primary};
 	font-weight: bold;
 	letter-spacing: 3px;
-	font-size: 18px;
+	font-size: 24px;
 
-	animation: myAnimation infinite 5s;
+	/* animation: myAnimation infinite 5s;
 
 	@keyframes myAnimation {
 		0% {
-			color: #21e6c1;
-		}
-		25% {
-			color: #278ea5;
+			color: ${colors.primary};
 		}
 		50% {
-			color: #1f4287;
-		}
-		75% {
-			color: #278ea5;
+			color: ${colors.terciary};
 		}
 		100% {
-			color: #21e6c1;
+			color: ${colors.primary};
 		}
-	}
+	} */
 `;
 
 export const NavButtons = styled.div`
@@ -113,13 +111,18 @@ export const NavButtons = styled.div`
 export const Button = styled.a`
 	display: none;
 	padding: 0.5rem 1rem 0.5rem 1rem;
-	background-color: #21e6c1;
+	background-color: ${colors.primary};
 	color: white;
 	font-weight: bold;
 	border-radius: 15px 0 0 15px;
 	font-size: 14px;
 	text-decoration: none;
 
+	:hover {
+		cursor: pointer;
+		opacity: 75%;
+	}
+	
 	:hover {
 		cursor: pointer;
 		opacity: 90%;
@@ -131,7 +134,7 @@ export const Button = styled.a`
 `;
 
 export const ResumeBtn = styled(Button)`
-	background-color: #278ea5;
+	background-color: ${colors.secondary};
 	color: white;
 	border-radius: 0 15px 15px 0;
 `;
@@ -150,24 +153,24 @@ export const Menu = styled.ul`
 	@media (max-width: 768px) {
 		flex-direction: column;
 		position: absolute;
-		top: 8vh;
+		top: 10vh;
 		right: 0;
-		height: 92vh;
+		height: 90vh;
 		width: 60vw;
 
 		transform: translateX(100%);
 		transition: transform 0.3s ease;
 	}
 
-	@media ((max-height: 768px) and (max-width: 768px)) {
+	/* @media (max-height: 768px and (max-width: 768px)) {
 		top: 10vh;
 		height: 90vh;
 	}
 
-	@media ((max-height: 512px) and (max-width: 768px)) {
+	@media (max-height: 512px and (max-width: 768px)) {
 		top: 12vh;
 		height: 88vh;
-	}
+	} */
 `;
 
 export const MenuItem = styled.li`
@@ -189,7 +192,7 @@ export const MenuItem = styled.li`
 		:hover {
 			font-weight: bold;
 			cursor: pointer;
-			background-color: #21e6c1;
+			background-color: ${colors.primary};
 		}
 
 		:hover > a {
@@ -199,14 +202,14 @@ export const MenuItem = styled.li`
 `;
 
 export const Item = styled.a`
-	color: #1f4287;
+	color: ${colors.secondary};
 	text-decoration: none;
 	padding: 1rem 0 1rem 0;
 	width: 100%;
 
 	:hover {
 		cursor: pointer;
-		color: #21e6c1;
+		color: ${colors.primary};
 	}
 
 	@media (max-width: 768px) {
@@ -234,7 +237,7 @@ export const MenuLine = styled.div`
 	transition: all 0.3s ease;
 
 	&.toggle {
-		background-color: #21e6c1;
+		background-color: ${colors.primary};
 	}
 
 	&.toggle.line1 {

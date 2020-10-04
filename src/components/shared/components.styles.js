@@ -1,9 +1,9 @@
 import styled from "styled-components";
+import colors from "../../colors";
 
 export const Section = styled.div`
-	// padding-top: 12vh;
-	// padding-bottom: 10vh;
 	padding: 15vh 5vw 10vh 5vw;
+	background-color: ${colors.secondary};
 `;
 
 export const Title = styled.h1`
@@ -15,7 +15,7 @@ export const Title = styled.h1`
 `;
 
 export const Subtitle = styled.p`
-	color: #21e6c1;
+	color: ${colors.primary};
 	font-weight: 600;
 	margin: 0;
 	padding: 0;

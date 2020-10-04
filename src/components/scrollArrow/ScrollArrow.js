@@ -3,6 +3,7 @@ import { MdKeyboardArrowUp } from "react-icons/md";
 // import styles from "./scrollArrow.module.scss";
 import useScroller from "../../hooks/UseScroller";
 import styled from "styled-components";
+import colors from "../../colors";
 
 const Arrow = styled.div`
 	position: fixed;
@@ -14,8 +15,9 @@ const Arrow = styled.div`
 	transition: opacity 1s;
 	opacity: 0.5;
 	border-radius: 45px;
-	background-color: #21e6c1;
-	color: #278ea5;
+	background-color: ${colors.primary};
+	color: ${colors.terciary};
+	border: 1px solid ${colors.secondary};
 	-webkit-box-shadow: 10px 10px 5px 0px #651a1b31;
 	-moz-box-shadow: 10px 10px 5px 0px #651a1b2f;
 	box-shadow: 5px 5px 5px 0px #651a1b27;
