@@ -59,8 +59,8 @@ export const WorkSection = () => {
 									))}
 								</Technologies>
 								<Buttons>
-									<LiveVersionBtn>Live</LiveVersionBtn>
-									<GithubBtn>Git</GithubBtn>
+									<LiveVersionBtn href={p.liveLink} target={'_blank'}>Live</LiveVersionBtn>
+									<GithubBtn href={p.githubLink} target={'_blank'}>Git</GithubBtn>
 								</Buttons>
 							</ProjectInfo>
 						</Project>

@@ -94,7 +94,7 @@ export const Buttons = styled.div`
 	}
 `;
 
-export const GithubBtn = styled.div`
+export const GithubBtn = styled.a`
 	height: 50px;
 	width: 50%;
 	color: ${colors.primary};
@@ -103,6 +103,7 @@ export const GithubBtn = styled.div`
 	line-height: 50px;
 	font-weight: bold;
 	border-radius: 5px;
+	text-decoration: none;
 
 	:hover {
 		cursor: pointer;
