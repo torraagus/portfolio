@@ -6,7 +6,9 @@ const projectSchema = new Schema({
 	description: String,
 	backend: [String],
 	frontend: [String],
-	srcImage: String
+	srcImage: String,
+	githubLink: String,
+	liveLink: String,
 });
 
 module.exports = model("Project", projectSchema);
