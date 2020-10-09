@@ -20,7 +20,7 @@ app.use("/api/about", require("./routes/about.routes"));
 app.use("/api/login", require("./routes/login.routes"));
 app.get("/download", (req, res) => {
 	const { lg } = req.query;
-	const filename = lg === "es" ? "/cvs/cv_spanish.pdf" : "/cvs/cv_english.pdf";
+	const filename = lg === "es" ? "/cvs/cv_es.pdf" : "/cvs/cv_en.pdf";
 	res.download(path.join(__dirname, "..") + filename, filename);
 });
 app.post("/send-email", (req, res) => {
