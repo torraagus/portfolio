@@ -30,10 +30,9 @@ export const WorkSection = () => {
 
 	return (
 		<MyWork id="my-work">
-			<Title>My work</Title>
+			<Title>Projects</Title>
 			<Subtitle>Here are some projects you can see...</Subtitle>
 			<Projects>
-				<Title size={20}>Projects</Title>
 				{projects.length > 0 &&
 					projects.map((p) => (
 						<Project key={p.name}>
