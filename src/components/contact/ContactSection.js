@@ -51,7 +51,7 @@ export const ContactSection = () => {
 	return (
 		<Contact id="contact">
 			<Title>Contact</Title>
-			<Subtitle>You can use this form to contact me</Subtitle>
+			<Subtitle>Feel free to contact me</Subtitle>
 			{sent && <Alert type="success">Email enviado con exito </Alert>}
 			{error && <Alert type="error">{error}</Alert>}
 			<Form onSubmit={onSubmit}>

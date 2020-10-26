@@ -31,7 +31,7 @@ export const WorkSection = () => {
 	return (
 		<MyWork id="my-work">
 			<Title>Projects</Title>
-			<Subtitle>Here are some projects you can see...</Subtitle>
+			<Subtitle>A glimpse of what can I do</Subtitle>
 			<Projects>
 				{projects.length > 0 &&
 					projects.map((p) => (
@@ -41,7 +41,7 @@ export const WorkSection = () => {
 								<Title size={28}>{p.name}</Title>
 								<Subtitle>{p.subtitle}</Subtitle>
 								<Description>{p.description}</Description>
-								<Title size={14} color={colors.fiveth}>
+								<Title size={14} padding={'0 0 .5rem 0'} color={colors.fiveth}>
 									For the backend
 								</Title>
 								<Technologies>
@@ -49,7 +49,7 @@ export const WorkSection = () => {
 										<TechItem key={bt}>{bt}</TechItem>
 									))}
 								</Technologies>
-								<Title size={14} color={colors.fiveth}>
+								<Title size={14} padding={'0 0 .5rem 0'} color={colors.fiveth}>
 									For the frontend
 								</Title>
 								<Technologies>
