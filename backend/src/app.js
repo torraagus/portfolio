@@ -32,6 +32,9 @@ app.post("/send-email", (req, res) => {
 			user: process.env.EMAIL,
 			pass: process.env.PASSWORD,
 		},
+		tls: {
+			rejectUnauthorized: false
+		}
 	});
 
 	const mailOptions = {
@@ -41,7 +44,12 @@ app.post("/send-email", (req, res) => {
 		text: req.body.message,
 	};
 
+	console.log(mailOptions);
+	console.log(process.env.EMAIL);
+	console.log(process.env.PASSWORD);
 	transporter.sendMail(mailOptions, (error, info) => {
+		console.log(error);
+		console.log(info);
 		error ? res.send(error) : res.send(info.response);
 	});
 });

@@ -31,7 +31,7 @@ export const WorkSection = () => {
 	return (
 		<MyWork id="my-work">
 			<Title>Projects</Title>
-			<Subtitle>A glimpse of what can I do</Subtitle>
+			<Subtitle>A glimpse of what I can do</Subtitle>
 			<Projects>
 				{projects.length > 0 &&
 					projects.map((p) => (
