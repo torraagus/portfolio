@@ -15,7 +15,7 @@ export const ContactSection = () => {
 	const [subject, setSubject] = useState("");
 	const [from, setFrom] = useState("");
 	const [message, setMessage] = useState("");
-	const { error, sendEmail, sending, sent, setError } = useEmail();
+	const { error, sendEmail, sending, sent, setSent, setError } = useEmail();
 
 	const sendBtnRef = useRef(null);
 
@@ -34,7 +34,8 @@ export const ContactSection = () => {
 
 	useEffect(() => {
 		setError(null);
-	}, [from, message, setError, subject]);
+		setSent(false);
+	}, [from, message, setError, setSent, subject]);
 
 	useEffect(() => {
 		const interval = setInterval(() => {
@@ -51,8 +52,8 @@ export const ContactSection = () => {
 	return (
 		<Contact id="contact">
 			<Title>Contact</Title>
-			<Subtitle>You can use this form to contact me</Subtitle>
-			{sent && <Alert type="success">Email enviado con exito </Alert>}
+			<Subtitle>Please feel free to contact me</Subtitle>
+			{sent && <Alert type="success">Email enviado con éxito </Alert>}
 			{error && <Alert type="error">{error}</Alert>}
 			<Form onSubmit={onSubmit}>
 				<Label>

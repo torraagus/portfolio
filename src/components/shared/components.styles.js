@@ -10,7 +10,7 @@ export const Title = styled.h1`
 	color: ${(props) => (props.color ? props.color : "white")};
 	text-transform: uppercase;
 	margin: 0;
-	padding: 0;
+	padding: ${(props) => (props.padding ? props.padding : 0)};
 	font-size: ${(props) => props.size}px;
 `;
 

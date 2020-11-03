@@ -9,6 +9,7 @@ const Arrow = styled.div`
 	position: fixed;
 	right: 2rem;
 	bottom: 2rem;
+	outline: none;
 	z-index: 1;
 	cursor: pointer;
 	animation: fadeIn 1s;
