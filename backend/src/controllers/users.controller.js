@@ -1,29 +1,29 @@
 const usersCtrl = {};
 const User = require("../models/User");
 
-const code = {
-  DUPLICATED_VALUE: "11000",
-};
+// const code = {
+//   DUPLICATED_VALUE: "11000",
+// };
 
 usersCtrl.getUsers = async (req, res) => {
   const users = await User.find();
   res.json(users);
 };
 
-usersCtrl.createUser = async (req, res) => {
-  const user = new User(req.body);
-  await user.save((err) => {
-    if (err) {
-      const message =
-        err.code == code.DUPLICATED_VALUE
-          ? `The username ${err.keyValue.username} is already in use`
-          : `${err}`;
-      res.json({ message: message });
-      return console.log(message);
-    }
-    res.json({ message: "User saved" });
-  });
-};
+// usersCtrl.createUser = async (req, res) => {
+//   const user = new User(req.body);
+//   await user.save((err) => {
+//     if (err) {
+//       const message =
+//         err.code == code.DUPLICATED_VALUE
+//           ? `The username ${err.keyValue.username} is already in use`
+//           : `${err}`;
+//       res.json({ message: message });
+//       return console.log(message);
+//     }
+//     res.json({ message: "User saved" });
+//   });
+// };
 
 usersCtrl.getUser = async (req, res) => {
   const user = await User.findById(req.params.id);
